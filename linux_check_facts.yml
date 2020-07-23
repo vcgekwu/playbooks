@@ -1,0 +1,9 @@
+---
+  - name: check facts of the hosts
+    hosts: all
+    gather_facts: no
+    tasks:
+      - setup:
+        register: fact_check
+
+      - debug: var=fact_check
